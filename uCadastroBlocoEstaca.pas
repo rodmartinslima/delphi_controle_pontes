@@ -15,9 +15,9 @@ type
     procedure btnEditClick(Sender: TObject);
     procedure btnDeleteClick(Sender: TObject);
   private
-    { Private declarations }
+    //
   public
-    { Public declarations }
+    //
   end;
 
 var
@@ -38,19 +38,18 @@ end;
 procedure TfrmCadastroBlocoEstaca.btnEditClick(Sender: TObject);
 begin
   inherited;
-  //InserirAba(TFrmBlocoSobreEstacas, FrmPrincipal.pgcPrincipal);
-  FrmBlocoSobreEstacas := TFrmBlocoSobreEstacas.Create(Self);
-  FrmBlocoSobreEstacas.isEdicao := True;
-  FrmBlocoSobreEstacas.Show;
+  InserirAba(TFrmBlocoSobreEstacas, FrmPrincipal.pgcPrincipal, -9999);
+  //FrmBlocoSobreEstacas := TFrmBlocoSobreEstacas.Create(Self);
+  //FrmBlocoSobreEstacas.isEdicao := True;
+  //FrmBlocoSobreEstacas.Show;
 end;
 
 procedure TfrmCadastroBlocoEstaca.btnNewClick(Sender: TObject);
 begin
   inherited;
-  //InserirAba(TFrmBlocoSobreEstacas, FrmPrincipal.pgcPrincipal);
-  FrmBlocoSobreEstacas := TFrmBlocoSobreEstacas.Create(Self);
-  FrmBlocoSobreEstacas.isEdicao := False;
-  FrmBlocoSobreEstacas.Show;
+  InserirAba(TFrmBlocoSobreEstacas, FrmPrincipal.pgcPrincipal, 9999);
+  //FrmBlocoSobreEstacas := TFrmBlocoSobreEstacas.Create(Self);
+  //FrmBlocoSobreEstacas.Show;
 end;
 
 procedure TfrmCadastroBlocoEstaca.FormShow(Sender: TObject);

@@ -2,6 +2,14 @@ inherited frmCadastroBlocoEstaca: TfrmCadastroBlocoEstaca
   Caption = 'Bloco Estacas'
   OnShow = FormShow
   TextHeight = 15
+  inherited panFrmBaseTop: TPanel
+    inherited labTituloForm: TLabel
+      Height = 14
+    end
+    inherited imgBtnFechar: TImage
+      Height = 16
+    end
+  end
   inherited panFrmBaseBotton: TPanel
     Color = 12615808
     ParentBackground = False
@@ -78,6 +86,16 @@ inherited frmCadastroBlocoEstaca: TfrmCadastroBlocoEstaca
     end
     inherited panFrmListagemBaseMenu: TPanel
       Width = 761
+      ExplicitWidth = 761
+      inherited btnDelete: TBitBtn
+        Left = 688
+      end
+      inherited btnEdit: TBitBtn
+        Left = 612
+      end
+      inherited btnNew: TBitBtn
+        Left = 536
+      end
     end
   end
   inherited DataSource: TDataSource

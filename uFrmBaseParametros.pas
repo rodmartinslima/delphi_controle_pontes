@@ -38,10 +38,8 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     FIsEdicao: Boolean;
-    function GetIsEdicao: Boolean;
-    procedure SetIsEdicao(const aValue: Boolean);
   public
-    property isEdicao: Boolean read GetIsEdicao write SetIsEdicao;
+
   end;
 
 var
@@ -55,14 +53,14 @@ procedure TFrmBaseParametros.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
-  //FecharAba(Self.Caption, FrmPrincipal.pgcPrincipal);
+  FecharAba(Self.Caption, FrmPrincipal.pgcPrincipal);
 end;
 
 procedure TFrmBaseParametros.FormCreate(Sender: TObject);
 begin
   inherited;
   labTituloForm.Visible := False;
-  //btnFechar.Visible := False;
+  btnFechar.Visible := False;
 end;
 
 procedure TFrmBaseParametros.FormShow(Sender: TObject);
@@ -81,22 +79,10 @@ begin
   end;
 end;
 
-function TFrmBaseParametros.GetIsEdicao: Boolean;
-begin
-  inherited;
-  //
-end;
-
 procedure TFrmBaseParametros.imgBtnFecharClick(Sender: TObject);
 begin
   inherited;
   FecharAba(Self.Caption, FrmPrincipal.pgcPrincipal);
-end;
-
-procedure TFrmBaseParametros.SetIsEdicao(const aValue: Boolean);
-begin
-   inherited;
-   //
 end;
 
 end.

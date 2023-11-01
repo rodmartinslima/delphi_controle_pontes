@@ -11,12 +11,8 @@ inherited FrmPrincipal: TFrmPrincipal
     Width = 941
     Color = clTeal
     ExplicitWidth = 941
-    inherited labTituloForm: TLabel
-      Height = 14
-    end
     inherited imgBtnFechar: TImage
       Left = 910
-      Height = 16
       ExplicitLeft = 910
     end
   end
@@ -109,9 +105,6 @@ inherited FrmPrincipal: TFrmPrincipal
         ParentBackground = False
         ParentFont = False
         TabOrder = 3
-        ExplicitLeft = 20
-        ExplicitTop = 9
-        ExplicitWidth = 185
         object labMsgMenu: TLabel
           Left = 1
           Top = 1

@@ -6,7 +6,7 @@ uses
   Vcl.ComCtrls, Vcl.Forms;
 
   function If_AbaExiste(aCaption: String; aPageControl: TPageControl): Boolean;
-  procedure InserirAba(aForm: TFormClass; aPageControl: TPageControl);
+  procedure InserirAba(aForm: TFormClass; aPageControl: TPageControl; aTag: NativeInt = 0);
   procedure FecharAba(aCaption: String; aPageControl: TPageControl);
   function ExtrairDiretorio: String;
   function CalcularVolume(const aArea, aPerimetro: Double): Double;
@@ -16,7 +16,7 @@ implementation
 uses
   Vcl.Controls, SysUtils;
 
-procedure InserirAba(aForm: TFormClass; aPageControl: TPageControl);
+procedure InserirAba(aForm: TFormClass; aPageControl: TPageControl; aTag: NativeInt = 0);
 var
   Tab: TTabSheet;
   Form: TForm;
@@ -30,6 +30,7 @@ begin
     Tab.Caption := Form.Caption;
 
     Form.Align := alClient;
+    Form.Tag := aTag;
     Form.BorderStyle := bsNone;
     Form.Parent := Tab;
     Form.Show;

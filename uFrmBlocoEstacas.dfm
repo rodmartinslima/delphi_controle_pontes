@@ -1,33 +1,31 @@
 inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
   Align = alClient
-  BorderStyle = bsNone
   Caption = 'Bloco Estaca'
-  ClientHeight = 267
-  ClientWidth = 656
+  ClientHeight = 303
+  ClientWidth = 894
   Position = poDesktopCenter
-  Visible = True
-  ExplicitWidth = 656
-  ExplicitHeight = 267
+  ExplicitWidth = 894
+  ExplicitHeight = 303
   TextHeight = 15
   inherited panFrmBaseTop: TPanel
-    Width = 656
+    Width = 894
     Color = 12615808
-    ExplicitWidth = 595
+    ExplicitWidth = 656
     inherited imgBtnFechar: TImage
-      Left = 625
-      ExplicitLeft = 564
+      Left = 863
+      ExplicitLeft = 625
     end
   end
   inherited panFrmBaseBotton: TPanel
-    Top = 226
-    Width = 656
+    Top = 262
+    Width = 894
     Color = 12615808
-    ExplicitTop = 444
-    ExplicitWidth = 595
+    ExplicitTop = 226
+    ExplicitWidth = 656
     inherited btnFechar: TBitBtn
-      Left = 571
+      Left = 809
       TabOrder = 3
-      ExplicitLeft = 510
+      ExplicitLeft = 571
     end
     inherited btnVerImg: TBitBtn
       TabOrder = 0
@@ -42,14 +40,14 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
     end
   end
   inherited panFrmBasePrincipal: TPanel
-    Width = 656
-    Height = 204
-    ExplicitWidth = 595
-    ExplicitHeight = 422
+    Width = 894
+    Height = 240
+    ExplicitWidth = 656
+    ExplicitHeight = 204
     inherited panPrincipalTop: TPanel
-      Width = 656
+      Width = 894
       Height = 225
-      ExplicitWidth = 595
+      ExplicitWidth = 656
       ExplicitHeight = 225
       inherited panParametros: TPanel
         AlignWithMargins = True
@@ -62,6 +60,7 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
         Margins.Right = 2
         Margins.Bottom = 0
         Align = alLeft
+        ExplicitLeft = 2
         ExplicitTop = 20
         ExplicitWidth = 305
         ExplicitHeight = 200
@@ -125,9 +124,8 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
           Top = 3
           Width = 299
           Align = alTop
-          ExplicitLeft = 0
-          ExplicitTop = 0
-          ExplicitWidth = 290
+          ExplicitLeft = 3
+          ExplicitTop = 3
         end
         inherited edtParam1: TDBEdit
           AlignWithMargins = True
@@ -169,17 +167,18 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
         end
       end
       inherited panPrincipalLinhaTopo: TPanel
-        Width = 656
-        ExplicitWidth = 595
+        Width = 894
+        ExplicitWidth = 656
       end
       inherited panPreviewImg: TPanel
         AlignWithMargins = True
-        Left = 468
+        Left = 706
         Top = 8
         Height = 209
         TabOrder = 3
-        ExplicitLeft = 410
-        ExplicitHeight = 215
+        ExplicitLeft = 468
+        ExplicitTop = 8
+        ExplicitHeight = 209
         inherited imgPreview: TImage
           AlignWithMargins = True
           Height = 207
@@ -858,17 +857,17 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
       end
       inherited panLinhaRodape: TPanel
         Top = 220
-        Width = 656
+        Width = 894
         Color = clBtnFace
         TabOrder = 2
         ExplicitTop = 220
-        ExplicitWidth = 595
+        ExplicitWidth = 656
       end
       object panParametrosEstacas: TPanel
         AlignWithMargins = True
         Left = 311
         Top = 20
-        Width = 152
+        Width = 390
         Height = 200
         Margins.Left = 2
         Margins.Top = 15
@@ -877,8 +876,7 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 4
-        ExplicitLeft = 305
-        ExplicitWidth = 451
+        ExplicitWidth = 152
         object labCompRocha: TLabel
           AlignWithMargins = True
           Left = 40
@@ -963,7 +961,7 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
           AlignWithMargins = True
           Left = 3
           Top = 3
-          Width = 146
+          Width = 384
           Height = 16
           Align = alTop
           Alignment = taCenter
@@ -976,9 +974,7 @@ inherited FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas
           Font.Style = [fsBold]
           ParentColor = False
           ParentFont = False
-          ExplicitLeft = 0
-          ExplicitTop = 1
-          ExplicitWidth = 451
+          ExplicitWidth = 218
         end
         object edtCompRocha: TDBEdit
           AlignWithMargins = True

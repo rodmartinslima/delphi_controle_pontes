@@ -32,13 +32,9 @@ type
   private
     FIsEdicao: Boolean;
     procedure SetDados;
-    function GetIsEdicao: Boolean;
-    procedure SetIsEdicao(const aValue: Boolean);
-    { Private declarations }
   public
-    property isEdicao: Boolean read GetIsEdicao write SetIsEdicao;
+    function IsEdicao(aModo:String): Boolean; virtual;
   end;
-
 var
   FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas;
 
@@ -55,7 +51,7 @@ begin
   DMPrincipal.Qry_Bloco_EstacaDATA_CADASTRO.AsDateTime := Date;
   DMPrincipal.Qry_Bloco_EstacaDIR_IMG.AsString := imgPreview.Picture.GetNamePath;
 
-  if not isEdicao then
+  if (Self.Tag = 9999) and (Self.Tag <> 0) then
     DMPrincipal.Qry_Bloco_EstacaID.AsInteger :=  DMPrincipal.GetID(UpperCase('Bloco_Estaca'));
 
   DMPrincipal.Qry_Bloco_Estaca.Post;
@@ -98,16 +94,22 @@ begin
   Self.SetDados();
 end;
 
-function TFrmBlocoSobreEstacas.GetIsEdicao: Boolean;
-begin
-  inherited;
-  //
-end;
-
 procedure TFrmBlocoSobreEstacas.imgBtnFecharClick(Sender: TObject);
 begin
   inherited;
   DMPrincipal.Qry_Bloco_Estaca.Cancel;
+end;
+
+function TFrmBlocoSobreEstacas.IsEdicao(aModo: String): Boolean;
+const
+  modoOpr : array  [0..2] of string = ('Novo','Editar','Deletar');
+begin
+  Result := False;
+
+  if aModo = modoOpr[1] then
+    Result := True;
+
+  FIsEdicao := Result;
 end;
 
 procedure TFrmBlocoSobreEstacas.SetDados;
@@ -121,7 +123,9 @@ begin
   //valores default
   with DMPrincipal do
   begin
-    if not isEdicao then
+    if (Self.Tag = -9999) and (Self.Tag <> 0) then
+      Qry_Bloco_Estaca.Edit
+    else if (Self.Tag = 9999) and (Self.Tag <> 0) then
     begin
       Qry_Bloco_Estaca.Open;
       Qry_Bloco_Estaca.Append;
@@ -129,8 +133,7 @@ begin
       Qry_Bloco_EstacaALTURA_BLOCO.AsFloat := 1.5;
       Qry_Bloco_EstacaDIAMETRO_PILAR.AsFloat := 0.92;
       Qry_Bloco_EstacaNUMERO_BLOCOS_NOVOS.AsInteger := 0;
-    end else
-      Qry_Bloco_Estaca.Edit;
+    end;
   end;
 
   edtParam4.Hint := 'Número de pilares da ponte - Valor original';
@@ -141,13 +144,6 @@ begin
   LabParam6.Visible := False;
   edtParam5.Visible := False;
   edtParam6.Visible := False;
-  isEdicao := False;
-end;
-
-procedure TFrmBlocoSobreEstacas.SetIsEdicao(const aValue: Boolean);
-begin
-  inherited;
-  //
 end;
 
 end.

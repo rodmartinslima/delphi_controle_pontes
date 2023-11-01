@@ -6,6 +6,7 @@ object uFrmBase: TuFrmBase
   ClientHeight = 400
   ClientWidth = 761
   Color = clBtnFace
+  DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
@@ -24,7 +25,6 @@ object uFrmBase: TuFrmBase
     Color = clActiveBorder
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 730
     object labTituloForm: TLabel
       AlignWithMargins = True
       Left = 5
@@ -84,7 +84,6 @@ object uFrmBase: TuFrmBase
       Stretch = True
       Transparent = True
       OnClick = imgBtnFecharClick
-      ExplicitLeft = 699
       ExplicitHeight = 26
     end
   end
@@ -96,8 +95,6 @@ object uFrmBase: TuFrmBase
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 426
-    ExplicitWidth = 730
     object btnFechar: TBitBtn
       AlignWithMargins = True
       Left = 676
@@ -118,7 +115,6 @@ object uFrmBase: TuFrmBase
       ParentFont = False
       TabOrder = 0
       OnClick = btnFecharClick
-      ExplicitLeft = 645
     end
   end
   object panFrmBasePrincipal: TPanel
@@ -129,7 +125,5 @@ object uFrmBase: TuFrmBase
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 2
-    ExplicitWidth = 730
-    ExplicitHeight = 404
   end
 end

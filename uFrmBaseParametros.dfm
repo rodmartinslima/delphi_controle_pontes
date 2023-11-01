@@ -2,48 +2,43 @@ inherited FrmBaseParametros: TFrmBaseParametros
   AlignWithMargins = True
   Anchors = []
   BorderIcons = []
-  BorderStyle = bsDialog
   Caption = 'FrmBaseParametros'
-  ClientHeight = 184
-  ClientWidth = 472
-  DefaultMonitor = dmDesktop
-  Position = poMainFormCenter
-  PrintScale = poNone
+  ClientHeight = 280
+  ClientWidth = 596
+  Position = poScreenCenter
+  PrintScale = poProportional
   Visible = True
-  WindowState = wsMaximized
   OnClose = FormClose
   OnShow = FormShow
-  ExplicitWidth = 484
-  ExplicitHeight = 222
+  ExplicitWidth = 596
+  ExplicitHeight = 280
   TextHeight = 15
   inherited panFrmBaseTop: TPanel
-    Width = 472
+    Width = 596
     Color = 5570560
-    ExplicitWidth = 799
+    ExplicitWidth = 468
     inherited labTituloForm: TLabel
-      Height = 14
+      Height = 15
+      Align = alNone
       Color = clWhite
       Font.Color = clWhite
       ParentColor = False
-      Visible = False
     end
     inherited imgBtnFechar: TImage
-      Left = 441
-      Height = 16
-      Visible = False
-      ExplicitLeft = 768
+      Left = 565
+      ExplicitLeft = 441
     end
   end
   inherited panFrmBaseBotton: TPanel
-    Top = 143
-    Width = 472
+    Top = 239
+    Width = 596
     Color = clSilver
     ParentBackground = False
-    ExplicitTop = 241
-    ExplicitWidth = 799
+    ExplicitTop = 142
+    ExplicitWidth = 468
     inherited btnFechar: TBitBtn
-      Left = 387
-      ExplicitLeft = 714
+      Left = 511
+      ExplicitLeft = 383
     end
     object btnVerImg: TBitBtn
       AlignWithMargins = True
@@ -101,29 +96,29 @@ inherited FrmBaseParametros: TFrmBaseParametros
     end
   end
   inherited panFrmBasePrincipal: TPanel
-    Width = 472
-    Height = 121
-    ExplicitWidth = 799
-    ExplicitHeight = 219
+    Width = 596
+    Height = 217
+    ExplicitWidth = 468
+    ExplicitHeight = 120
     object panPrincipalTop: TPanel
       Left = 0
       Top = 0
-      Width = 472
+      Width = 596
       Height = 209
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 799
+      ExplicitWidth = 468
       object panParametros: TPanel
         Left = 0
         Top = 5
-        Width = 287
+        Width = 411
         Height = 199
         Margins.Left = 50
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 614
+        ExplicitWidth = 283
         object labParam1: TLabel
           Left = 140
           Top = 34
@@ -238,7 +233,7 @@ inherited FrmBaseParametros: TFrmBaseParametros
       object panPrincipalLinhaTopo: TPanel
         Left = 0
         Top = 0
-        Width = 472
+        Width = 596
         Height = 5
         Align = alTop
         BevelOuter = bvNone
@@ -247,16 +242,16 @@ inherited FrmBaseParametros: TFrmBaseParametros
         Color = clGradientActiveCaption
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 799
+        ExplicitWidth = 468
       end
       object panPreviewImg: TPanel
-        Left = 287
+        Left = 411
         Top = 5
         Width = 185
         Height = 199
         Align = alRight
         TabOrder = 2
-        ExplicitLeft = 614
+        ExplicitLeft = 283
         object imgPreview: TImage
           Left = 1
           Top = 1
@@ -275,7 +270,7 @@ inherited FrmBaseParametros: TFrmBaseParametros
       object panLinhaRodape: TPanel
         Left = 0
         Top = 204
-        Width = 472
+        Width = 596
         Height = 5
         Align = alBottom
         BevelOuter = bvNone
@@ -284,7 +279,7 @@ inherited FrmBaseParametros: TFrmBaseParametros
         Color = clGradientActiveCaption
         ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 799
+        ExplicitWidth = 468
       end
     end
   end
