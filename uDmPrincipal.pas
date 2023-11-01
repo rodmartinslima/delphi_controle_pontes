@@ -1,0 +1,72 @@
+unit uDmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXInterBase, Data.FMTBcd,
+  IBX.IBDatabase, Data.SqlExpr, Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Comp.Client,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
+
+type
+  TDMPrincipal = class(TDataModule)
+    TransactionPrincipal: TFDTransaction;
+    FDConnection1: TFDConnection;
+    Qry_Bloco_Estaca: TFDQuery;
+    Qry_Bloco_EstacaID: TIntegerField;
+    Qry_Bloco_EstacaDATA_CADASTRO: TDateField;
+    Qry_Bloco_EstacaLADO_BLOCO: TFloatField;
+    Qry_Bloco_EstacaALTURA_BLOCO: TFloatField;
+    Qry_Bloco_EstacaDIAMETRO_PILAR: TFloatField;
+    Qry_Bloco_EstacaNUMERO_BLOCOS_NOVOS: TIntegerField;
+    Qry_Bloco_EstacaCOMPRIMENTO_SOLO_CS: TFloatField;
+    Qry_Bloco_EstacaCOMPRIMENTO_ROCHA_CR: TFloatField;
+    Qry_Bloco_EstacaCOMPRIMENTO_TOTAL_CT: TFloatField;
+    Qry_Bloco_EstacaNUMERO_ESTACAS_BLOCO: TIntegerField;
+    Qry_Bloco_EstacaNUMERO_TOTAL_ESTACAS: TIntegerField;
+    Qry_Bloco_EstacaDIR_IMG: TStringField;
+    FDUpdateSQL: TFDUpdateSQL;
+  private
+    { Private declarations }
+  public
+    function GetID(const aTabela: String): Integer;
+  end;
+
+var
+  DMPrincipal: TDMPrincipal;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+{ TDMPrincipal }
+
+function TDMPrincipal.GetID(const aTabela: String): Integer;
+var
+  Sql: String;
+  Qry: TFDQuery;
+begin
+  Result := -1;
+  Sql := 'SELECT MAX(ID) AS GERADOR FROM ' + aTabela;
+
+  Qry := TFDQuery.Create(nil);
+  try
+    Qry.Connection := FDConnection1;
+    Qry.SQL.Clear;
+    Qry.SQL.Text := Sql;
+    Qry.Open;
+    Result := Qry.FieldByName('GERADOR').AsInteger;
+
+    Result := Result + 1;
+  finally
+    Qry.Close;
+    FreeAndNil(Qry);
+  end;
+end;
+
+end.

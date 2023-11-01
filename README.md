@@ -1,2 +1,2 @@
 # delphi_controle_pontes
- Criado para dados de vistoria de pontes
+Sistema desenvolvido para gerenciar dados obtidos em vistoria de pontes para atender demandas da pesquisa de Metodologias para modelagem da informação de danos em sistemas de gestão de pontes, realizada pela doutoranda Ana Carolina Pereira Martins.
