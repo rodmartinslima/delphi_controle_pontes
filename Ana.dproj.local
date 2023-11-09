@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/18 20:46:17.000.714,=C:\Users\rodri\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 20:46:28.000.960,=C:\Users\rodri\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2023/09/18 20:46:53.000.713,=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBase.pas</Transaction>
+    <Transaction>2023/09/18 20:47:42.000.913,C:\Users\rodri\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\rodri\Desktop\Delphi\Ana\Ana.dproj</Transaction>
+    <Transaction>2023/09/18 20:49:26.000.890,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 20:51:05.000.200,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBaseListagem.pas</Transaction>
+    <Transaction>2023/09/18 20:51:05.000.200,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBaseListagem.dfm</Transaction>
+    <Transaction>2023/09/18 21:30:42.000.799,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 21:31:12.000.508,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 21:31:47.000.405,C:\Users\rodri\Desktop\Delphi\Ana\uFrmPrincipal.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/09/18 21:31:47.000.405,C:\Users\rodri\Desktop\Delphi\Ana\uFrmPrincipal.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:00:38.000.898,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:00:52.000.342,C:\Users\rodri\Desktop\Delphi\Ana\uFuncoes.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:01:05.000.175,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:02:59.000.086,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:03:14.000.210,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:06:59.000.395,C:\Users\rodri\Desktop\Delphi\Ana\uImagemRetrato.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/09/18 22:06:59.000.395,C:\Users\rodri\Desktop\Delphi\Ana\uImagemRetrato.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:07:18.000.998,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/18 22:08:08.000.166,C:\Users\rodri\Desktop\Delphi\Ana\uFrmImagemPaisagem.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/09/18 22:08:08.000.166,C:\Users\rodri\Desktop\Delphi\Ana\uFrmImagemPaisagem.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/19 22:15:21.000.602,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/19 22:15:36.000.154,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBaseParametros.dfm</Transaction>
+    <Transaction>2023/09/19 22:15:36.000.154,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBaseParametros.pas</Transaction>
+    <Transaction>2023/09/19 22:40:26.000.642,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/19 22:42:30.000.528,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBlocoEstacas.pas</Transaction>
+    <Transaction>2023/09/19 22:42:30.000.528,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm=C:\Users\rodri\Desktop\Delphi\Ana\uFrmBlocoEstacas.dfm</Transaction>
+    <Transaction>2023/09/24 20:28:11.000.696,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/09/24 20:28:59.000.594,C:\Users\rodri\Desktop\Delphi\Ana\uCadastroBlocoEstaca.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/09/24 20:28:59.000.594,C:\Users\rodri\Desktop\Delphi\Ana\uCadastroBlocoEstaca.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/10/23 20:59:58.000.681,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/10/23 21:03:36.000.834,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas=C:\Users\rodri\Desktop\Delphi\Ana\uDmPrincipal.pas</Transaction>
+    <Transaction>2023/10/23 21:03:36.000.834,C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm=C:\Users\rodri\Desktop\Delphi\Ana\uDmPrincipal.dfm</Transaction>
+    <Transaction>2023/11/02 14:38:33.000.809,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 14:39:23.000.162,C:\Users\rodri\Desktop\Delphi\Ana\uFrmParametrosSapata.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 14:39:23.000.162,C:\Users\rodri\Desktop\Delphi\Ana\uFrmParametrosSapata.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/11/02 14:41:29.000.008,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 14:42:08.000.279,C:\Users\rodri\Desktop\Delphi\Ana\uListagemSapatas.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 14:42:08.000.279,C:\Users\rodri\Desktop\Delphi\Ana\uListagemSapatas.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/11/06 22:35:19.000.518,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/06 22:36:15.000.146,C:\Users\rodri\Desktop\Delphi\Ana\uFrmListagemSapata.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/06 22:36:15.000.146,C:\Users\rodri\Desktop\Delphi\Ana\uFrmListagemSapata.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/11/08 22:41:10.485,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/08 22:41:30.663,C:\Users\rodri\Desktop\Delphi\Ana\uListagemTubulao.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/11/08 22:41:30.663,C:\Users\rodri\Desktop\Delphi\Ana\uListagemTubulao.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/08 22:43:26.948,=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+    <Transaction>2023/11/08 22:44:14.665,C:\Users\rodri\Desktop\Delphi\Ana\uFrmParametrosTubulao.dfm=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.dfm</Transaction>
+    <Transaction>2023/11/08 22:44:14.665,C:\Users\rodri\Desktop\Delphi\Ana\uFrmParametrosTubulao.pas=C:\Users\rodri\Desktop\Delphi\Ana\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,152 @@
+unit uFrmBlocoEstacas;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFrmBaseParametros, Vcl.StdCtrls,
+  Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Imaging.jpeg, Vcl.Mask, Vcl.DBCtrls, uDmPrincipal;
+
+type
+  TFrmBlocoSobreEstacas = class(TFrmBaseParametros)
+    panParametrosEstacas: TPanel;
+    labCompRocha: TLabel;
+    labCompSolo: TLabel;
+    labCompTotal: TLabel;
+    labNumEstacasBloco: TLabel;
+    labNumTotalEstacas: TLabel;
+    labParamEstacas: TLabel;
+    DataSource: TDataSource;
+    edtCompRocha: TDBEdit;
+    edtCompSolo: TDBEdit;
+    edtCompTotal: TDBEdit;
+    edtNumEstacasBloco: TDBEdit;
+    edtNumTotalEstacas: TDBEdit;
+    procedure btnVerImgClick(Sender: TObject);
+    procedure edtNumEstacasBlocoExit(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure imgBtnFecharClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    FIsEdicao: Boolean;
+    procedure SetDados;
+    function GetIsEdicao: Boolean;
+    procedure SetIsEdicao(const aValue: Boolean);
+    { Private declarations }
+  public
+    property isEdicao: Boolean read GetIsEdicao write SetIsEdicao;
+  end;
+
+var
+  FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas;
+
+implementation
+
+uses
+  uFrmImagemPaisagem, uImagemRetrato, FireDAC.Comp.Client;
+
+{$R *.dfm}
+
+procedure TFrmBlocoSobreEstacas.BitBtn2Click(Sender: TObject);
+begin
+  inherited;
+  DMPrincipal.Qry_Bloco_EstacaDATA_CADASTRO.AsDateTime := Date;
+  DMPrincipal.Qry_Bloco_EstacaDIR_IMG.AsString := imgPreview.Picture.GetNamePath;
+
+  if not isEdicao then
+    DMPrincipal.Qry_Bloco_EstacaID.AsInteger :=  DMPrincipal.GetID(UpperCase('Bloco_Estaca'));
+
+  DMPrincipal.Qry_Bloco_Estaca.Post;
+
+  Self.Close;
+end;
+
+procedure TFrmBlocoSobreEstacas.btnVerImgClick(Sender: TObject);
+begin
+  inherited;
+  frmImagemRetrato.imgRetrato.Picture := imgPreview.Picture;
+  frmImagemRetrato.ShowModal;
+end;
+
+procedure TFrmBlocoSobreEstacas.edtNumEstacasBlocoExit(Sender: TObject);
+begin
+  inherited;
+  with DMPrincipal do
+  begin
+    if (VarToStr(Qry_Bloco_EstacaNUMERO_BLOCOS_NOVOS.Value) <> '') and
+      (VarToStr(Qry_Bloco_EstacaNUMERO_ESTACAS_BLOCO.Value) <> '') then
+    begin
+      Qry_Bloco_Estaca.Edit;
+      Qry_Bloco_EstacaNUMERO_TOTAL_ESTACAS.Value := Qry_Bloco_EstacaNUMERO_BLOCOS_NOVOS.Value *
+                                   Qry_Bloco_EstacaNUMERO_ESTACAS_BLOCO.Value;
+    end;
+  end;
+end;
+
+procedure TFrmBlocoSobreEstacas.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+  FIsEdicao := False;
+end;
+
+procedure TFrmBlocoSobreEstacas.FormShow(Sender: TObject);
+begin
+  inherited;
+  Self.SetDados();
+end;
+
+function TFrmBlocoSobreEstacas.GetIsEdicao: Boolean;
+begin
+  inherited;
+  //
+end;
+
+procedure TFrmBlocoSobreEstacas.imgBtnFecharClick(Sender: TObject);
+begin
+  inherited;
+  DMPrincipal.Qry_Bloco_Estaca.Cancel;
+end;
+
+procedure TFrmBlocoSobreEstacas.SetDados;
+begin
+  //Nomeação dos parâmetros
+  labParam1.Caption := 'Lado do Bloco';
+  labParam2.Caption := 'Altura do Bloco';
+  labParam3.Caption := 'Diâmetro do Pilar';
+  labParam4.Caption := 'Número de blocos novos';
+
+  //valores default
+  with DMPrincipal do
+  begin
+    if not isEdicao then
+    begin
+      Qry_Bloco_Estaca.Open;
+      Qry_Bloco_Estaca.Append;
+      Qry_Bloco_EstacaLADO_BLOCO.AsFloat := 2.5;
+      Qry_Bloco_EstacaALTURA_BLOCO.AsFloat := 1.5;
+      Qry_Bloco_EstacaDIAMETRO_PILAR.AsFloat := 0.92;
+      Qry_Bloco_EstacaNUMERO_BLOCOS_NOVOS.AsInteger := 0;
+    end;
+  end;
+
+  edtParam4.Hint := 'Número de pilares da ponte - Valor original';
+  edtParam4.ShowHint := True;
+
+  //ocultar
+  LabParam5.Visible := False;
+  LabParam6.Visible := False;
+  edtParam5.Visible := False;
+  edtParam6.Visible := False;
+  isEdicao := False;
+end;
+
+procedure TFrmBlocoSobreEstacas.SetIsEdicao(const aValue: Boolean);
+begin
+  inherited;
+  //
+end;
+
+end.

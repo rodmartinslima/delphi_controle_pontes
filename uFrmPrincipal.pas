@@ -13,13 +13,15 @@ type
     panMenuLeft: TPanel;
     btnBlocoEstaca: TBitBtn;
     pgcPrincipal: TPageControl;
-    BitBtn1: TBitBtn;
+    btnSapata: TBitBtn;
     BitBtn2: TBitBtn;
     ImageList: TImageList;
     labMsgMenu: TLabel;
     panMenuTopo: TPanel;
     procedure btnBlocoEstacaClick(Sender: TObject);
     procedure FormClick(Sender: TObject);
+    procedure btnSapataClick(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,20 +34,26 @@ var
 implementation
 
 uses
-  uFrmBlocoEstacas, uCadastroBlocoEstaca;
+  uCadastroBlocoEstaca, uFrmParametrosSapata, uListagemSapatas, uListagemTubulao;
 
 {$R *.dfm}
+
+procedure TFrmPrincipal.BitBtn2Click(Sender: TObject);
+begin
+  inherited;
+  InserirAba(TFrmListagemTubulao, pgcPrincipal);
+end;
 
 procedure TFrmPrincipal.btnBlocoEstacaClick(Sender: TObject);
 begin
   inherited;
-  InserirAba(TFrmCadastroBlocoEstaca, pgcPrincipal);
+  InserirAba(TfrmCadastroBlocoEstaca, pgcPrincipal);
+end;
 
-  {if cbxTpFundacao.ItemIndex = 0 then
-  else if cbxTpFundacao.ItemIndex = 1  then
-    //InserirAba(TFormxxx, pgcPrincipal)
-  else if cbxTpFundacao.ItemIndex = 2  then
-    //InserirAba(TFormxxx, pgcPrincipal)     }
+procedure TFrmPrincipal.btnSapataClick(Sender: TObject);
+begin
+  inherited;
+  InserirAba(TuFrmListagemSapatas, pgcPrincipal);
 end;
 
 procedure TFrmPrincipal.FormClick(Sender: TObject);

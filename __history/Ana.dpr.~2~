@@ -1,0 +1,15 @@
+program Ana;
+
+uses
+  Vcl.Forms,
+  uFrmBase in 'uFrmBase.pas' {uFrmBase},
+  uFrmBaseListagem in 'uFrmBaseListagem.pas' {uFrmListagemBase};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TuFrmListagemBase, uFrmListagemBase);
+  Application.Run;
+end.

@@ -1,0 +1,47 @@
+unit uDmPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DBXInterBase, Data.FMTBcd,
+  IBX.IBDatabase, Data.SqlExpr, Data.DB, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Comp.Client,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Comp.DataSet;
+
+type
+  TDMPrincipal = class(TDataModule)
+    TransactionPrincipal: TFDTransaction;
+    FDConnection1: TFDConnection;
+    Qry_BD: TFDQuery;
+    Qry_BDID: TIntegerField;
+    Qry_BDDATA_CADASTRO: TDateField;
+    Qry_BDLADO_BLOCO: TFloatField;
+    Qry_BDALTURA_BLOCO: TFloatField;
+    Qry_BDDIAMETRO_PILAR: TFloatField;
+    Qry_BDNUMERO_BLOCOS_NOVOS: TIntegerField;
+    Qry_BDCOMPRIMENTO_SOLO_CS: TFloatField;
+    Qry_BDCOMPRIMENTO_ROCHA_CR: TFloatField;
+    Qry_BDCOMPRIMENTO_TOTAL_CT: TFloatField;
+    Qry_BDNUMERO_ESTACAS_BLOCO: TIntegerField;
+    Qry_BDNUMERO_TOTAL_ESTACAS: TIntegerField;
+    Qry_BDDIR_IMG: TStringField;
+    FDUpdateSQL: TFDUpdateSQL;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DMPrincipal: TDMPrincipal;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

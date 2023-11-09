@@ -138,6 +138,22 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="uFrmParametrosSapata.pas">
+            <Form>FrmSapata</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uListagemSapatas.pas">
+            <Form>uFrmListagemSapatas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uListagemTubulao.pas">
+            <Form>FrmListagemTubulao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uFrmParametrosTubulao.pas">
+            <Form>frmParametrosTubulao</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

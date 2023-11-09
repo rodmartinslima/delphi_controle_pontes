@@ -1,13 +1,10 @@
 unit uCadastroBlocoEstaca;
-
 interface
-
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFrmBaseListagem, Data.DB, Vcl.StdCtrls,
   Vcl.Mask, Vcl.Grids, Vcl.DBGrids, Vcl.DBCtrls, Vcl.Buttons,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, uDmPrincipal, uFrmPrincipal, uFuncoes;
-
 type
   TfrmCadastroBlocoEstaca = class(TuFrmListagemBase)
     procedure FormShow(Sender: TObject);
@@ -19,22 +16,16 @@ type
   public
     //
   end;
-
 var
   frmCadastroBlocoEstaca: TfrmCadastroBlocoEstaca;
-
 implementation
-
 {$R *.dfm}
-
 uses uFrmBlocoEstacas;
-
 procedure TfrmCadastroBlocoEstaca.btnDeleteClick(Sender: TObject);
 begin
   inherited;
   DMPrincipal.Qry_Bloco_Estaca.Delete;
 end;
-
 procedure TfrmCadastroBlocoEstaca.btnEditClick(Sender: TObject);
 begin
   inherited;
@@ -43,7 +34,6 @@ begin
   //FrmBlocoSobreEstacas.isEdicao := True;
   //FrmBlocoSobreEstacas.Show;
 end;
-
 procedure TfrmCadastroBlocoEstaca.btnNewClick(Sender: TObject);
 begin
   inherited;
@@ -51,7 +41,6 @@ begin
   //FrmBlocoSobreEstacas := TFrmBlocoSobreEstacas.Create(Self);
   //FrmBlocoSobreEstacas.Show;
 end;
-
 procedure TfrmCadastroBlocoEstaca.FormShow(Sender: TObject);
 begin
   inherited;

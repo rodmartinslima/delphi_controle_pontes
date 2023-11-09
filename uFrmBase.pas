@@ -19,9 +19,12 @@ type
     procedure btnFecharClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
+    function GetIsEdicao: Boolean;
+    procedure SetIsEdicao(const aValue: Boolean);
     { Private declarations }
   public
-
+    FIsEdicao: Boolean;
+    property isEdicao: Boolean read GetIsEdicao write SetIsEdicao;
   end;
 
 var
@@ -41,9 +44,19 @@ begin
   labTituloForm.Caption := Self.Caption;
 end;
 
+function TuFrmBase.GetIsEdicao: Boolean;
+begin
+  Result := FIsEdicao;
+end;
+
 procedure TuFrmBase.imgBtnFecharClick(Sender: TObject);
 begin
   Self.Close;
+end;
+
+procedure TuFrmBase.SetIsEdicao(const aValue: Boolean);
+begin
+  FIsEdicao := aValue;
 end;
 
 end.

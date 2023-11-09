@@ -1,0 +1,27 @@
+unit uFrmBase;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TuFrmBase = class(TForm)
+    panFrmBaseTop: TPanel;
+    labTituloForm: TLabel;
+    imgBtnFechar: TImage;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  uFrmBase: TuFrmBase;
+
+implementation
+
+{$R *.dfm}
+
+end.

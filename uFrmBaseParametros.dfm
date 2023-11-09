@@ -15,10 +15,9 @@ inherited FrmBaseParametros: TFrmBaseParametros
   TextHeight = 15
   inherited panFrmBaseTop: TPanel
     Width = 596
-    Color = 5570560
-    ExplicitWidth = 468
+    Color = clTeal
+    ExplicitWidth = 596
     inherited labTituloForm: TLabel
-      Height = 15
       Align = alNone
       Color = clWhite
       Font.Color = clWhite
@@ -26,6 +25,7 @@ inherited FrmBaseParametros: TFrmBaseParametros
     end
     inherited imgBtnFechar: TImage
       Left = 565
+      Height = 16
       ExplicitLeft = 441
     end
   end
@@ -34,11 +34,11 @@ inherited FrmBaseParametros: TFrmBaseParametros
     Width = 596
     Color = clSilver
     ParentBackground = False
-    ExplicitTop = 142
-    ExplicitWidth = 468
+    ExplicitTop = 239
+    ExplicitWidth = 596
     inherited btnFechar: TBitBtn
       Left = 511
-      ExplicitLeft = 383
+      ExplicitLeft = 511
     end
     object btnVerImg: TBitBtn
       AlignWithMargins = True
@@ -98,8 +98,8 @@ inherited FrmBaseParametros: TFrmBaseParametros
   inherited panFrmBasePrincipal: TPanel
     Width = 596
     Height = 217
-    ExplicitWidth = 468
-    ExplicitHeight = 120
+    ExplicitWidth = 596
+    ExplicitHeight = 217
     object panPrincipalTop: TPanel
       Left = 0
       Top = 0
@@ -108,7 +108,6 @@ inherited FrmBaseParametros: TFrmBaseParametros
       Align = alTop
       BevelOuter = bvNone
       TabOrder = 0
-      ExplicitWidth = 468
       object panParametros: TPanel
         Left = 0
         Top = 5
@@ -118,7 +117,6 @@ inherited FrmBaseParametros: TFrmBaseParametros
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 283
         object labParam1: TLabel
           Left = 140
           Top = 34
@@ -242,7 +240,6 @@ inherited FrmBaseParametros: TFrmBaseParametros
         Color = clGradientActiveCaption
         ParentBackground = False
         TabOrder = 1
-        ExplicitWidth = 468
       end
       object panPreviewImg: TPanel
         Left = 411
@@ -251,7 +248,6 @@ inherited FrmBaseParametros: TFrmBaseParametros
         Height = 199
         Align = alRight
         TabOrder = 2
-        ExplicitLeft = 283
         object imgPreview: TImage
           Left = 1
           Top = 1
@@ -279,7 +275,6 @@ inherited FrmBaseParametros: TFrmBaseParametros
         Color = clGradientActiveCaption
         ParentBackground = False
         TabOrder = 3
-        ExplicitWidth = 468
       end
     end
   end

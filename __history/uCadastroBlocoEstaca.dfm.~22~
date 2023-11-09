@@ -1,0 +1,91 @@
+inherited frmCadastroBlocoEstaca: TfrmCadastroBlocoEstaca
+  Caption = 'Bloco Estacas'
+  OnShow = FormShow
+  TextHeight = 15
+  inherited panFrmBaseBotton: TPanel
+    Color = 12615808
+    ParentBackground = False
+    inherited dbNavigator: TDBNavigator
+      DataSource = DataSource
+      Hints.Strings = ()
+    end
+  end
+  inherited panFrmBasePrincipal: TPanel
+    inherited dbgPrincipal: TDBGrid
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ID'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DATA_CADASTRO'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'LADO_BLOCO'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ALTURA_BLOCO'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DIAMETRO_PILAR'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMERO_BLOCOS_NOVOS'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'COMPRIMENTO_SOLO_CS'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'COMPRIMENTO_ROCHA_CR'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'COMPRIMENTO_TOTAL_CT'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMERO_ESTACAS_BLOCO'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'NUMERO_TOTAL_ESTACAS'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DIR_IMG'
+          Width = 64
+          Visible = True
+        end>
+    end
+  end
+  inherited DataSource: TDataSource
+    DataSet = DMPrincipal.Qry_Bloco_Estaca
+  end
+end

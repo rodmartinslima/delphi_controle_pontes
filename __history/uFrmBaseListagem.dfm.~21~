@@ -1,0 +1,130 @@
+inherited uFrmListagemBase: TuFrmListagemBase
+  Caption = 'uFrmListagemBase'
+  TextHeight = 15
+  inherited panFrmBaseBotton: TPanel
+    inherited btnFechar: TBitBtn
+      Visible = False
+    end
+    object dbNavigator: TDBNavigator
+      AlignWithMargins = True
+      Left = 10
+      Top = 3
+      Width = 240
+      Height = 35
+      Margins.Left = 10
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+      Align = alLeft
+      Anchors = [akLeft]
+      TabOrder = 1
+    end
+  end
+  inherited panFrmBasePrincipal: TPanel
+    object dbgPrincipal: TDBGrid
+      Left = 0
+      Top = 49
+      Width = 730
+      Height = 355
+      Align = alClient
+      BorderStyle = bsNone
+      DataSource = DataSource
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgTitleClick, dgTitleHotTrack]
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -12
+      TitleFont.Name = 'Segoe UI'
+      TitleFont.Style = []
+    end
+    object panFrmListagemBaseMenu: TPanel
+      Left = 0
+      Top = 0
+      Width = 730
+      Height = 49
+      Align = alTop
+      BevelOuter = bvNone
+      TabOrder = 1
+      object labPesquisar: TLabel
+        Left = 16
+        Top = 3
+        Width = 74
+        Height = 15
+        Caption = 'Pesquisar por'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object edtPesquisar: TMaskEdit
+        Left = 16
+        Top = 20
+        Width = 241
+        Height = 23
+        Hint = 'Digite a sua pesquisa...'
+        BevelOuter = bvNone
+        TabOrder = 0
+        Text = ''
+        TextHint = 'Digite a sua pesquisa...'
+      end
+      object btnDelete: TBitBtn
+        AlignWithMargins = True
+        Left = 657
+        Top = 3
+        Width = 70
+        Height = 43
+        Align = alRight
+        Anchors = [akRight]
+        Caption = 'Apagar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 1
+        OnClick = btnDeleteClick
+      end
+      object btnEdit: TBitBtn
+        AlignWithMargins = True
+        Left = 581
+        Top = 3
+        Width = 70
+        Height = 43
+        Align = alRight
+        Anchors = [akRight]
+        Caption = 'Editar'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 2
+        OnClick = btnEditClick
+      end
+      object btnNew: TBitBtn
+        AlignWithMargins = True
+        Left = 505
+        Top = 3
+        Width = 70
+        Height = 43
+        Align = alRight
+        Anchors = [akRight]
+        Caption = 'Novo '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 3
+        OnClick = btnNewClick
+      end
+    end
+  end
+  object DataSource: TDataSource
+    Left = 648
+    Top = 350
+  end
+end

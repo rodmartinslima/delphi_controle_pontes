@@ -1,13 +1,10 @@
 unit uFrmBaseParametros;
-
 interface
-
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFrmBase, Vcl.StdCtrls, Vcl.Buttons,
   Vcl.Imaging.pngimage, Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, uFuncoes, uFrmPrincipal,
   Vcl.Mask, Vcl.DBCtrls;
-
 type
   TFrmBaseParametros = class(TuFrmBase)
     panPrincipalLinhaTopo: TPanel;
@@ -39,30 +36,23 @@ type
   private
     FIsEdicao: Boolean;
   public
-
   end;
-
 var
   FrmBaseParametros: TFrmBaseParametros;
-
 implementation
-
 {$R *.dfm}
-
 procedure TFrmBaseParametros.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
   FecharAba(Self.Caption, FrmPrincipal.pgcPrincipal);
 end;
-
 procedure TFrmBaseParametros.FormCreate(Sender: TObject);
 begin
   inherited;
   labTituloForm.Visible := False;
   btnFechar.Visible := False;
 end;
-
 procedure TFrmBaseParametros.FormShow(Sender: TObject);
 var
   DiretorioImg: String;
@@ -70,7 +60,6 @@ begin
   inherited;
   DiretorioImg := ExtrairDiretorio();
   DiretorioImg := DiretorioImg + '\imagens\preview-img-' + Self.Caption+'.jpg';
-
   try
     if imgPreview.Picture.ToString = '' then
       imgPreview.Picture.LoadFromFile(DiretorioImg);
@@ -78,7 +67,6 @@ begin
      raise Exception.Create('Não foi possível carregar a imagem');
   end;
 end;
-
 procedure TFrmBaseParametros.imgBtnFecharClick(Sender: TObject);
 begin
   inherited;

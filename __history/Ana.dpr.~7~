@@ -1,0 +1,27 @@
+program Ana;
+
+uses
+  Vcl.Forms,
+  uFrmBase in 'uFrmBase.pas' {uFrmBase},
+  uFrmBaseListagem in 'uFrmBaseListagem.pas' {uFrmListagemBase},
+  uFrmPrincipal in 'uFrmPrincipal.pas' {FrmPrincipal},
+  uFuncoes in 'uFuncoes.pas',
+  uImagemRetrato in 'uImagemRetrato.pas' {frmImagemRetrato},
+  uFrmImagemPaisagem in 'uFrmImagemPaisagem.pas' {frmImagemPaisagem},
+  uFrmBaseParametros in 'uFrmBaseParametros.pas' {FrmBaseParametros},
+  uFrmBlocoEstacas in 'uFrmBlocoEstacas.pas' {FrmBlocoSobreEstacas},
+  uCadastroBlocoEstaca in 'uCadastroBlocoEstaca.pas' {frmCadastroBlocoEstaca};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TfrmImagemRetrato, frmImagemRetrato);
+  Application.CreateForm(TfrmImagemPaisagem, frmImagemPaisagem);
+  Application.CreateForm(TFrmBaseParametros, FrmBaseParametros);
+  Application.CreateForm(TFrmBlocoSobreEstacas, FrmBlocoSobreEstacas);
+  Application.CreateForm(TfrmCadastroBlocoEstaca, frmCadastroBlocoEstaca);
+  Application.Run;
+end.

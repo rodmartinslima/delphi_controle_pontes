@@ -11,7 +11,11 @@ uses
   uFrmBaseParametros in 'uFrmBaseParametros.pas' {FrmBaseParametros},
   uFrmBlocoEstacas in 'uFrmBlocoEstacas.pas' {FrmBlocoSobreEstacas},
   uCadastroBlocoEstaca in 'uCadastroBlocoEstaca.pas' {frmCadastroBlocoEstaca},
-  uDmPrincipal in 'uDmPrincipal.pas' {DMPrincipal: TDataModule};
+  uDmPrincipal in 'uDmPrincipal.pas' {DMPrincipal: TDataModule},
+  uFrmParametrosSapata in 'uFrmParametrosSapata.pas' {FrmSapata},
+  uListagemSapatas in 'uListagemSapatas.pas' {uFrmListagemSapatas},
+  uListagemTubulao in 'uListagemTubulao.pas' {FrmListagemTubulao},
+  uFrmParametrosTubulao in 'uFrmParametrosTubulao.pas' {frmParametrosTubulao};
 
 {$R *.res}
 

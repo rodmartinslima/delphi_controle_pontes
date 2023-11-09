@@ -1,13 +1,10 @@
 unit uFrmBlocoEstacas;
-
 interface
-
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFrmBaseParametros, Vcl.StdCtrls,
   Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Data.DB, Vcl.Grids,
   Vcl.DBGrids, Vcl.Imaging.jpeg, Vcl.Mask, Vcl.DBCtrls, uDmPrincipal;
-
 type
   TFrmBlocoSobreEstacas = class(TFrmBaseParametros)
     panParametrosEstacas: TPanel;
@@ -37,35 +34,26 @@ type
   end;
 var
   FrmBlocoSobreEstacas: TFrmBlocoSobreEstacas;
-
 implementation
-
 uses
   uFrmImagemPaisagem, uImagemRetrato, FireDAC.Comp.Client;
-
 {$R *.dfm}
-
 procedure TFrmBlocoSobreEstacas.BitBtn2Click(Sender: TObject);
 begin
   inherited;
   DMPrincipal.Qry_Bloco_EstacaDATA_CADASTRO.AsDateTime := Date;
   DMPrincipal.Qry_Bloco_EstacaDIR_IMG.AsString := imgPreview.Picture.GetNamePath;
-
   if (Self.Tag = 9999) and (Self.Tag <> 0) then
     DMPrincipal.Qry_Bloco_EstacaID.AsInteger :=  DMPrincipal.GetID(UpperCase('Bloco_Estaca'));
-
   DMPrincipal.Qry_Bloco_Estaca.Post;
-
   Self.Close;
 end;
-
 procedure TFrmBlocoSobreEstacas.btnVerImgClick(Sender: TObject);
 begin
   inherited;
   frmImagemRetrato.imgRetrato.Picture := imgPreview.Picture;
   frmImagemRetrato.ShowModal;
 end;
-
 procedure TFrmBlocoSobreEstacas.edtNumEstacasBlocoExit(Sender: TObject);
 begin
   inherited;
@@ -80,20 +68,17 @@ begin
     end;
   end;
 end;
-
 procedure TFrmBlocoSobreEstacas.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
   inherited;
   FIsEdicao := False;
 end;
-
 procedure TFrmBlocoSobreEstacas.FormShow(Sender: TObject);
 begin
   inherited;
   Self.SetDados();
 end;
-
 procedure TFrmBlocoSobreEstacas.imgBtnFecharClick(Sender: TObject);
 begin
   inherited;
@@ -119,7 +104,6 @@ begin
   labParam2.Caption := 'Altura do Bloco';
   labParam3.Caption := 'Diâmetro do Pilar';
   labParam4.Caption := 'Número de blocos novos';
-
   //valores default
   with DMPrincipal do
   begin
@@ -135,15 +119,12 @@ begin
       Qry_Bloco_EstacaNUMERO_BLOCOS_NOVOS.AsInteger := 0;
     end;
   end;
-
   edtParam4.Hint := 'Número de pilares da ponte - Valor original';
   edtParam4.ShowHint := True;
-
   //ocultar
   LabParam5.Visible := False;
   LabParam6.Visible := False;
   edtParam5.Visible := False;
   edtParam6.Visible := False;
 end;
-
 end.

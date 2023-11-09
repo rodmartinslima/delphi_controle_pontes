@@ -1,0 +1,92 @@
+unit uFrmBaseParametros;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, uFrmBase, Vcl.StdCtrls, Vcl.Buttons,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids, uFuncoes, uFrmPrincipal,
+  Vcl.Mask, Vcl.DBCtrls;
+
+type
+  TFrmBaseParametros = class(TuFrmBase)
+    panPrincipalLinhaTopo: TPanel;
+    panParametros: TPanel;
+    labParam1: TLabel;
+    labParam2: TLabel;
+    labParam3: TLabel;
+    labParam4: TLabel;
+    labParam5: TLabel;
+    labParam6: TLabel;
+    labTituloParametros: TLabel;
+    btnVerImg: TBitBtn;
+    BitBtn2: TBitBtn;
+    panPrincipalTop: TPanel;
+    BitBtn3: TBitBtn;
+    panPreviewImg: TPanel;
+    imgPreview: TImage;
+    edtParam1: TDBEdit;
+    edtParam2: TDBEdit;
+    edtParam3: TDBEdit;
+    edtParam4: TDBEdit;
+    edtParam5: TDBEdit;
+    edtParam6: TDBEdit;
+    panLinhaRodape: TPanel;
+    procedure FormCreate(Sender: TObject);
+    procedure imgBtnFecharClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    function GetIsEdicao: Boolean;
+    procedure SetIsEdicao(const aValue: Boolean);
+  public
+    FIsEdicao: Boolean;
+    property isEdicao: Boolean read GetIsEdicao write SetIsEdicao;
+  end;
+
+var
+  FrmBaseParametros: TFrmBaseParametros;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmBaseParametros.FormCreate(Sender: TObject);
+begin
+  inherited;
+  labTituloForm.Visible := False;
+  btnFechar.Visible := False;
+end;
+
+procedure TFrmBaseParametros.FormShow(Sender: TObject);
+var
+  DiretorioImg: String;
+begin
+  inherited;
+  DiretorioImg := ExtrairDiretorio();
+  DiretorioImg := DiretorioImg + '\imagens\preview-img-' + Self.Caption+'.jpg';
+
+  try
+    if imgPreview.Picture.ToString = '' then
+      imgPreview.Picture.LoadFromFile(DiretorioImg);
+  except
+     raise Exception.Create('Não foi possível carregar a imagem');
+  end;
+end;
+
+function TFrmBaseParametros.GetIsEdicao: Boolean;
+begin
+  Result := FIsEdicao;
+end;
+
+procedure TFrmBaseParametros.imgBtnFecharClick(Sender: TObject);
+begin
+  inherited;
+  FecharAba(Self.Caption, FrmPrincipal.pgcPrincipal);
+end;
+
+procedure TFrmBaseParametros.SetIsEdicao(const aValue: Boolean);
+begin
+   FIsEdicao := aValue;
+end;
+
+end.

@@ -1,0 +1,55 @@
+inherited FrmSapata: TFrmSapata
+  Caption = 'Par'#226'metros Sapata'
+  ClientHeight = 274
+  ClientWidth = 601
+  ExplicitWidth = 613
+  ExplicitHeight = 312
+  TextHeight = 15
+  inherited panFrmBaseTop: TPanel
+    Width = 601
+    ExplicitWidth = 468
+    inherited labTituloForm: TLabel
+      Height = 14
+    end
+    inherited imgBtnFechar: TImage
+      Left = 570
+      Height = 16
+    end
+  end
+  inherited panFrmBaseBotton: TPanel
+    Top = 233
+    Width = 601
+    ExplicitTop = 142
+    ExplicitWidth = 468
+    inherited btnFechar: TBitBtn
+      Left = 516
+      ExplicitLeft = 383
+    end
+  end
+  inherited panFrmBasePrincipal: TPanel
+    Width = 601
+    Height = 211
+    ExplicitWidth = 468
+    ExplicitHeight = 120
+    inherited panPrincipalTop: TPanel
+      Width = 601
+      ExplicitWidth = 468
+      inherited panParametros: TPanel
+        Width = 416
+        ExplicitWidth = 283
+      end
+      inherited panPrincipalLinhaTopo: TPanel
+        Width = 601
+        ExplicitWidth = 468
+      end
+      inherited panPreviewImg: TPanel
+        Left = 416
+        ExplicitLeft = 283
+      end
+      inherited panLinhaRodape: TPanel
+        Width = 601
+        ExplicitWidth = 468
+      end
+    end
+  end
+end

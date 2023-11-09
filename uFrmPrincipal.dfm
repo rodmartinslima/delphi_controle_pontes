@@ -11,8 +11,12 @@ inherited FrmPrincipal: TFrmPrincipal
     Width = 941
     Color = clTeal
     ExplicitWidth = 941
+    inherited labTituloForm: TLabel
+      Height = 14
+    end
     inherited imgBtnFechar: TImage
       Left = 910
+      Height = 16
       ExplicitLeft = 910
     end
   end
@@ -60,7 +64,7 @@ inherited FrmPrincipal: TFrmPrincipal
         TabOrder = 0
         OnClick = btnBlocoEstacaClick
       end
-      object BitBtn1: TBitBtn
+      object btnSapata: TBitBtn
         Left = 4
         Top = 125
         Width = 201
@@ -73,7 +77,7 @@ inherited FrmPrincipal: TFrmPrincipal
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        OnClick = btnBlocoEstacaClick
+        OnClick = btnSapataClick
       end
       object BitBtn2: TBitBtn
         Left = 4
@@ -88,7 +92,7 @@ inherited FrmPrincipal: TFrmPrincipal
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        OnClick = btnBlocoEstacaClick
+        OnClick = BitBtn2Click
       end
       object panMenuTopo: TPanel
         Left = 0
